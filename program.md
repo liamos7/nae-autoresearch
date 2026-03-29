@@ -133,7 +133,7 @@ git checkout main -- train.py
 - **Oscillating loss**: Loss swings between positive and negative. Normal early on, but should stabilize. Fix: reduce LR, increase warmup.
 
 ## Environment
-
+- **GitHub**: https://github.com/liamos7/nae-autoresearch 
 - **Cluster**: Princeton Adroit (NVIDIA GPUs, Slurm scheduler)
 - **Time budget**: 10 minutes per experiment (configurable with `--time-budget`)
 - **Dataset**: CICADA (LHC calorimeter images, 18×14 pixels). Background = Zero Bias (label 0). Signals (labels 1-10): ggH→ττ, ggH→γγ, H→2LL→4b, SingleNeutrino, SUEP, tt̄, VBF H→2b, VBF H→ττ, Z'→ττ, ZZ.
