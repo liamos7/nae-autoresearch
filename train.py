@@ -42,7 +42,7 @@ USE_COSINE_DECAY = True
 
 # --- Training ---
 BATCH_SIZE = 128
-EPOCHS = 20                 # shortened for faster iteration in autoresearch
+EPOCHS = 25                 # shortened for faster iteration in autoresearch
 SEED = 42
 GRAD_CLIP = 0.1
 
@@ -56,7 +56,7 @@ TEMPERATURE_TRAINABLE = False
 # --- Langevin Monte Carlo: Latent chain ---
 Z_STEP_SIZE = 0.005
 Z_NOISE_STD = 0.005
-Z_STEPS = 30
+Z_STEPS = 15
 Z_USE_METROPOLIS = False
 
 # --- Langevin Monte Carlo: Data chain ---
