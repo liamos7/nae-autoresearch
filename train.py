@@ -42,12 +42,12 @@ USE_COSINE_DECAY = True
 
 # --- Training ---
 BATCH_SIZE = 128
-EPOCHS = 50                 # shortened for faster iteration in autoresearch
+EPOCHS = 20                 # shortened for faster iteration in autoresearch
 SEED = 42
 GRAD_CLIP = 0.1
 
 # --- NAE Energy Training (Phase 2) ---
-GAMMA = 1e-2                # weight for energy^2 regularization
+GAMMA = 5e-1                # weight for energy^2 regularization
 NEG_LAMBDA = 1.0            # weight on negative energy term
 L2_WEIGHT = 1e-8            # L2 weight regularization
 TEMPERATURE = 1.0
@@ -417,7 +417,7 @@ def train(dataset, holdout_class, pretrained_path, data_root, output_dir):
     from fastad.datasets import get_loaders
     train_loader, val_loader = get_loaders(
         hold_out_classes=holdout_class, batch_size=BATCH_SIZE,
-        ds_name=dataset, n_max=None, root=data_root,
+        ds_name=dataset, n_max=50000, root=data_root,
     )
 
     # --- Seed replay buffer ---
