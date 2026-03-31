@@ -27,7 +27,7 @@ import torch.nn.functional as F
 # ============================================================================
 
 # --- Model ---
-LATENT_DIM = 20 #80?
+LATENT_DIM = 20
 SPHERICAL = True
 
 # --- Optimizer ---
@@ -41,8 +41,8 @@ WARMUP_FRACTION = 0.10      # fraction of total steps for linear warmup
 USE_COSINE_DECAY = True
 
 # --- Training ---
-BATCH_SIZE = 128
-EPOCHS = 30                 # shortened for faster iteration in autoresearch
+BATCH_SIZE = 512
+EPOCHS = 50                 # shortened for faster iteration in autoresearch
 SEED = 42
 GRAD_CLIP = 0.1
 
