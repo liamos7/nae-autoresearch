@@ -417,7 +417,7 @@ def train(dataset, holdout_class, pretrained_path, data_root, output_dir):
     from fastad.datasets import get_loaders
     train_loader, val_loader = get_loaders(
         hold_out_classes=holdout_class, batch_size=BATCH_SIZE,
-        ds_name=dataset, n_max=50000, root=data_root,
+        ds_name=dataset, n_max=100000, root=data_root,
     )
 
     # --- Seed replay buffer ---
