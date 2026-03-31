@@ -27,7 +27,7 @@ import torch.nn.functional as F
 # ============================================================================
 
 # --- Model ---
-LATENT_DIM = 20
+LATENT_DIM = 20 #80?
 SPHERICAL = True
 
 # --- Optimizer ---
@@ -42,7 +42,7 @@ USE_COSINE_DECAY = True
 
 # --- Training ---
 BATCH_SIZE = 128
-EPOCHS = 25                 # shortened for faster iteration in autoresearch
+EPOCHS = 30                 # shortened for faster iteration in autoresearch
 SEED = 42
 GRAD_CLIP = 0.1
 
